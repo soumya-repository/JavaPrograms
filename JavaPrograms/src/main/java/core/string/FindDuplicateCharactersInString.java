@@ -10,13 +10,13 @@ public class FindDuplicateCharactersInString {
 	public static void main(String[] args) {
 
 		String input = "Heyyy How Are You";
-		method6(input);
+		method1(input);
 
 	}
 
 	// Using Set of Entry and Iterator
 	public static void method1(String input) {
-		String str = input.replaceAll(" ", "");
+		String str = input.replaceAll("\\s", "");
 		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 
 		for (int i = 0; i < str.length(); i++) {
