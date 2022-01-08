@@ -10,7 +10,7 @@ public class FindDuplicateCharactersInString {
 	public static void main(String[] args) {
 
 		String input = "Heyyy How Are You";
-		method1(input);
+		method5(input);
 
 	}
 
@@ -95,33 +95,9 @@ public class FindDuplicateCharactersInString {
 			}
 		}
 	}
-
-	// without Using collection and taking a int array
-	public static void method5(String input) {
-		// Convert String to array. Don't use String its immutable
-		char [] str = input.replaceAll(" ", "").toCharArray();
-		int [] arr = new int[str.length];
-		for (int i = 0; i < str.length; i++) {
-			int temp = 1;
-			for(int j = i+1; j < str.length; j++) {
-				if(str[i] == str[j]) {
-					temp++;
-					str[j] = '\u0000';
-				}
-			}
-			
-			arr[i] = temp;
-		}
-		
-		for(int i =0; i< arr.length; i++) {
-			if(str[i] != '\u0000' && arr[i]>1) 
-				System.out.println(str[i]+" : "+arr[i]);
-		}
-		
-	}
 	
-	// without Using collection and without taking a int array
-	public static void method6(String input) {
+	// without Using collection
+	public static void method5(String input) {
 		// Convert String to array. Don't use String its immutable
 		char [] str = input.replaceAll(" ", "").toCharArray();
 		for (int i = 0; i < str.length; i++) {
